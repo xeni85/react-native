@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "coursera",
+    "slug": "coursera",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "coursera"
+}
