@@ -17,7 +17,7 @@ function Menu(props) {
     const renderMenuItem = ({item, index}) => {
         console.log("------Within Menu Item-----")
         return (
-                <ListItem key={index}>
+                <ListItem key={index} onPress={() => props.onPress(item.id)}>
                     <ListItem.Content>
                     <ListItem.Title>{item.name}</ListItem.Title>
                     <ListItem.Subtitle>{item.description}</ListItem.Subtitle>
