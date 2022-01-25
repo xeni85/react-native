@@ -19,7 +19,7 @@ class Menu extends Component {
     render() {
         // const { navigate } = this.props.navigation.navigate;
         
-        const renderMenuItem = ({item, index }) => {
+        const RenderMenuItem = ({item, index }) => {
             console.log("------Within Menu Item-----")
             return (
                     <ListItem key={index} onPress={() => this.props.navigation.navigate('Dish Details', {dishId: item.id})}>
@@ -37,7 +37,7 @@ class Menu extends Component {
             <View>
                 <FlatList 
                     data={this.state.dishes}
-                    renderItem={renderMenuItem}
+                    renderItem={RenderMenuItem}
                     keyExtractor={item => item.id.toString()}
                     />
             </View>

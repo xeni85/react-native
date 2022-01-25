@@ -6,7 +6,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator} from '@react-navigation/drawer';
 import Home from './HomeComponent';
-
+import Contact from './ContactComponent';
+import About from './AboutComponent';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator()
@@ -54,6 +55,43 @@ return (
 </Stack.Navigator>
 )};
 
+//-------Stack Navigator------
+const ContactNavigator = () => {
+  return (
+    <Stack.Navigator 
+    initialRouteName='Contact'
+    screenOptions={{
+    headerMode: 'screen',
+    headerTintColor: '#fff',
+    headerStyle: {
+        backgroundColor: '512DA8'
+    },
+    headerTitleStyle: {
+        color: '#fff'
+    }
+}}>
+    <Stack.Screen name='Contact' component={Contact} />
+</Stack.Navigator>
+)};
+
+//-------Stack Navigator------
+const AboutNavigator = () => {
+  return (
+    <Stack.Navigator 
+    initialRouteName='About'
+    screenOptions={{
+    headerMode: 'screen',
+    headerTintColor: '#fff',
+    headerStyle: {
+        backgroundColor: '512DA8'
+    },
+    headerTitleStyle: {
+        color: '#fff'
+    }
+}}>
+    <Stack.Screen name='About Us' component={About} />
+</Stack.Navigator>
+)};
 //-------Draw Navigator-------
 
 const MainNavigator = 
@@ -62,6 +100,8 @@ const MainNavigator =
 <Drawer.Navigator initialRouteName='Home'>
 <Drawer.Screen name='Home' component={HomeNavigator} />
 <Drawer.Screen name='Menu' component={MenuNavigator} />
+<Drawer.Screen name='Contact' component={ContactNavigator} />
+<Drawer.Screen name='About' component={AboutNavigator} />
 </Drawer.Navigator>
 </NavigationContainer>
 
@@ -88,6 +128,6 @@ class Main extends Component {
   }
 }
 
-// draw navigator
+
 
 export default Main;

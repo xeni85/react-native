@@ -11,13 +11,14 @@ function RenderItem(props) {
     if (item != null) {
         return (
             <View>
+            <Card>
             <Card.FeaturedTitle>{item.name}</Card.FeaturedTitle>
             <Card.FeaturedSubtitle>{item.designation}</Card.FeaturedSubtitle>
             <Card.Image source={require('./images/uthapizza.jfif')} />
                 <Text style={{margin: 10}}>
                     {item.description}
                 </Text>
-
+            </Card>
             </View>
         )
     } else {
@@ -36,7 +37,7 @@ class Home extends Component {
         }
     }
 
-    static navigationOprions = {
+    static navigationOptions = {
         title: 'Home'
     };
 
